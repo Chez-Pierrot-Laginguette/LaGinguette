@@ -473,6 +473,42 @@
             display: flex;
         }
 
+        /* =============================================
+           ICÔNES FLOTTANTES CONTACT
+           ============================================= */
+        .social-floating {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 40;
+        }
+
+        .social-floating a {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--rose-bonbon), var(--rose-fushia));
+            border: none;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(255, 20, 147, 0.4);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-floating a:hover {
+            background: linear-gradient(135deg, var(--rose-fushia), var(--rose-bonbon));
+            box-shadow: 0 8px 30px rgba(255, 20, 147, 0.6);
+            transform: translateY(-5px) scale(1.1);
+        }
+
         @media (max-width: 768px) {
             .lightbox-close {
                 top: 15px;
@@ -1621,7 +1657,7 @@
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-4">Horaires</h3>
                     <ul class="text-gray-600 space-y-2 text-left">
-                        <li><strong>Lundi</strong> <span class="text-rose-fushia font-bold">FERMÉE</span></li>
+                        <li><strong>Lundi</strong> <span class="text-rose-fushia font-bold">FERMÉ</span></li>
                         <li><strong>Mardi</strong> 11h-14h, 18h-22h</li>
                         <li><strong>Mercredi</strong> 11h-14h, 18h-22h</li>
                         <li><strong>Jeudi</strong> 18h-22h</li>
@@ -1699,7 +1735,7 @@
                         Calvisson, 30420<br>
                         France
                     </p>
-                    <a href="https://maps.google.com/?q=8+Place+de+l'Horloge+Clarensac" 
+                    <a href="https://www.google.com/maps/place/73+Chem.+Poissonnier,+30420+Calvisson/@43.7828763,4.2059661,3a,75y,126.32h,90t/data=!3m5!1e1!3m3!1sAsvuxYicmByS4yiS_9uawg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DAsvuxYicmByS4yiS_9uawg%26yaw%3D126.31941!4m15!1m8!3m7!1s0x12b42671a19287d1:0x265863ef3001eae5!2s73+Chem.+Poissonnier,+30420+Calvisson!3b1!8m2!3d43.782696!4d4.2063058!16s%2Fg%2F11y5gzwj3g!3m5!1s0x12b42671a19287d1:0x265863ef3001eae5!8m2!3d43.782696!4d4.2063058!16s%2Fg%2F11y5gzwj3g?entry=ttu&g_ep=EgoyMDI2MDQyMC4wIKXMDSoASAFQAw%3D%3D" 
                        target="_blank"
                        class="block w-full text-center bg-rose-bonbon text-white px-4 py-3 rounded-lg font-semibold text-sm hover:bg-rose-fushia transition">
                         <i class="fas fa-directions mr-2"></i>Voir sur Maps
@@ -1744,7 +1780,7 @@
                 <!-- Carte Google Maps -->
                 <div class="fade-in rounded-3xl overflow-hidden shadow-2xl border-4 border-rose-bonbon h-96 md:h-full min-h-96">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2863.6248856544246!2d4.2185242!3d43.8267494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b4277d7bc44a8d%3A0x493e45ae3651bf1c!2sChez%20Pierrot%20Clarensac%20Snack%20Pizza%20Traiteur!5e0!3m2!1sfr!2sfr!4v1677000000000"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2872.8548856544246!2d4.2059661!3d43.7828763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b42671a19287d1%3A0x265863ef3001eae5!2s73%20Chem.%20Poissonnier%2C%2030420%20Calvisson!5e0!3m2!1sfr!2sfr!4v1677000000000"
                         width="100%" 
                         height="100%" 
                         style="border:0;" 
@@ -1766,7 +1802,7 @@
                             <div class="space-y-4">
                                 <div class="flex justify-between items-center pb-4 border-b border-gray-200">
                                     <span class="text-gray-700 font-medium">Lundi</span>
-                                    <span class="font-bold text-rose-bonbon">18h - 22h</span>
+                                    <span class="font-bold text-rose-bonbon">Fermé</span>
                                 </div>
                                 <div class="flex justify-between items-center pb-4 border-b border-gray-200">
                                     <span class="text-gray-700 font-medium">Mardi</span>
@@ -1778,7 +1814,7 @@
                                 </div>
                                 <div class="flex justify-between items-center pb-4 border-b border-gray-200">
                                     <span class="text-gray-700 font-medium">Jeudi</span>
-                                    <span class="font-bold text-rose-fushia">FERMÉ</span>
+                                    <span class="font-bold text-rose-fushia">18h - 22h</span>
                                 </div>
                                 <div class="flex justify-between items-center pb-4 border-b border-gray-200">
                                     <span class="text-gray-700 font-medium">Vendredi</span>
@@ -1941,6 +1977,29 @@
             </div>
         </div>
     </footer>
+
+    <!-- =============================================
+         ICÔNES FLOTTANTES CONTACT
+         ============================================= -->
+    <div class="social-floating">
+        <a href="https://www.facebook.com/chezpierrot30" 
+           target="_blank"
+           title="Facebook"
+           class="facebook-icon">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/chezpierrot_lafamille/" 
+           target="_blank"
+           title="Instagram"
+           class="instagram-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="tel:0768738548" 
+           title="Appeler"
+           class="phone-icon">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
 
     <!-- =============================================
          BOUTON REMONTER EN HAUT
